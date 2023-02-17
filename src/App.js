@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { UseMountDemo } from './UseMountDemo';
 import './style.css';
-import UserList from './UserList';
 
 export default function App() {
-  const [users, setUser] = useState();
+  // const [users, setUser] = useState();
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users?_limit=3')
-      .then((data) => data.json())
-      .then((response) => {
-        setUser(response);
-      });
-  }, []);
+  // useEffect(() => {}, []);
 
   return (
-    <div>
-      <p>Start editing to see some magic happen :)</p>
-      {users && <UserList users={users} />}
-    </div>
+    <>
+      <p>React Custom Hooks</p>
+      <UseMountDemo />
+      <a href="usemountdemo">Use Mount Demo</a>
+      <BrowserRouter>
+        <Routes>
+          <Route index path="/usemountdemo" element={<UseMountDemo />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
