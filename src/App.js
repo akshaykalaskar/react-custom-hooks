@@ -13,11 +13,11 @@ export default function App() {
       <p>React Custom Hooks</p>
       <UseMountDemo />
       <a href="/usemountdemo">Use Mount Demo</a>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route index path="/usemountdemo" element={<UseMountDemo />} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
     </>
   );
 }
