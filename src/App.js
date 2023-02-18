@@ -11,8 +11,10 @@ export default function App() {
   return (
     <>
       <p>React Custom Hooks</p>
-      <UseMountDemo />
-      <a href="/usemountdemo">Use Mount Demo</a>
+      <a href=" https://fatfish.medium.com/4-custom-react-hooks-every-developer-should-know-106ca78c0bca">
+        fatfish.medium.com
+      </a>
+
       <BrowserRouter>
         <Routes>
           <Route index path="/usemountdemo" element={<UseMountDemo />} />
